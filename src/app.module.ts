@@ -1,4 +1,5 @@
 import {Module} from "@nestjs/common";
+import { AppController } from "./app.controller";
 /* import {SequelizeModule} from "@nestjs/sequelize";
 import { UsersModule } from './users/users.module';
 import {ConfigModule} from "@nestjs/config";
@@ -14,7 +15,9 @@ import {ServeStaticModule} from "@nestjs/serve-static";
 import * as path from 'path';
 */
 @Module({
-    controllers: [],
+    controllers: [
+        AppController
+    ],
     providers: [],
     imports: [
     /*    ConfigModule.forRoot({
