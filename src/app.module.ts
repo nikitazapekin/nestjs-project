@@ -1,5 +1,6 @@
-import {Module} from "@nestjs/common";
+import { Module } from "@nestjs/common";
 import { AppController } from "./app.controller";
+import { AppServise } from "./app.service";
 /* import {SequelizeModule} from "@nestjs/sequelize";
 import { UsersModule } from './users/users.module';
 import {ConfigModule} from "@nestjs/config";
@@ -18,30 +19,35 @@ import * as path from 'path';
     controllers: [
         AppController
     ],
-    providers: [],
+
+    //провайдеры - то что может переиспользоваться
+    providers: [
+        AppServise
+
+    ],
     imports: [
-    /*    ConfigModule.forRoot({
-           envFilePath: `.${process.env.NODE_ENV}.env`
-        }),
-        ServeStaticModule.forRoot({
-            rootPath: path.resolve( __dirname, 'static'),
-        }),
-        SequelizeModule.forRoot({
-            dialect: 'postgres',
-            host: process.env.POSTGRES_HOST,
-            port: Number(process.env.POSTGRESS_PORT),
-            username: process.env.POSTGRES_USER,
-            password: process.env.POSTGRESS_PASSWORD,
-            database: process.env.POSTGRES_DB,
-            models: [User, Role, UserRoles, Post],
-            autoLoadModels: true
-        }),
-        UsersModule,
-        RolesModule,
-        AuthModule,
-        PostsModule,
-        FilesModule,
-        */
+        /*    ConfigModule.forRoot({
+               envFilePath: `.${process.env.NODE_ENV}.env`
+            }),
+            ServeStaticModule.forRoot({
+                rootPath: path.resolve( __dirname, 'static'),
+            }),
+            SequelizeModule.forRoot({
+                dialect: 'postgres',
+                host: process.env.POSTGRES_HOST,
+                port: Number(process.env.POSTGRESS_PORT),
+                username: process.env.POSTGRES_USER,
+                password: process.env.POSTGRESS_PASSWORD,
+                database: process.env.POSTGRES_DB,
+                models: [User, Role, UserRoles, Post],
+                autoLoadModels: true
+            }),
+            UsersModule,
+            RolesModule,
+            AuthModule,
+            PostsModule,
+            FilesModule,
+            */
     ]
 })
-export class AppModule {}
+export class AppModule { }
