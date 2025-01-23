@@ -1,0 +1,16 @@
+npm install -g @nestjs/cli
+nest new project-name
+nest generate controller cats
+nest generate service cats
+
+
+
+microservices
+
+
+nest new order_service
+nest new user_service
+npm i --save @grpc/grpc-js @grpc/proto-loader
+npm i protoc-gen-ts_proto
+
+ 
